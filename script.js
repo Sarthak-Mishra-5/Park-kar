@@ -104,6 +104,7 @@ function sliderAnimaton() {
   });
 }
 sliderAnimaton();
+
 function loader() {
   var tl = gsap.timeline();
   tl.from("#loader h3", {
@@ -133,3 +134,16 @@ function loader() {
   });
 }
 loader();
+
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     console.log(entry);
+//     if (entry.isIntersecting) entry.target.classList.add("show");
+//     else entry.target.classList.remove("show");
+//   });
+// });
+
+// const hiddenElements = document.querySelectorAll(".hidden");
+// hiddenElements.forEach((el) => observer.observe(el));
+
+
