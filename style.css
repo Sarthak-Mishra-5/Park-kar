@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @font-face {
   font-family: nb;
   src: url(./NBInternationalProBoo.ttf);
@@ -37,7 +39,6 @@ body {
   flex-direction: column;
   align-items: center;
   transform: translate(-50%, -50%);
-  
 }
 #cursor h5 {
   font-size: 1vw;
@@ -114,7 +115,6 @@ nav h4 {
   border-radius: 50%;
   transition: all ease 0.4s;
 }
-
 
 #nav-part2 h4:hover::after {
   bottom: 0;
@@ -209,6 +209,25 @@ nav h4 {
   font-size: 4.2vw;
   font-weight: 500;
 }
+.wave-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-2 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.wave-2 .shape-fill {
+  fill: #faf8f3;
+}
 #page3 {
   min-height: 100vh;
   width: 100%;
@@ -218,6 +237,7 @@ nav h4 {
 #page3-top {
   /* background-color: red; */
   text-align: center;
+  padding-bottom: 5vw;
 }
 #page3-top h4 {
   margin-bottom: 1vw;
@@ -232,8 +252,90 @@ nav h4 {
   border-radius: 10px;
 }
 #page3-top h2 {
+  user-select: none;
+  padding-top: 1vw;
+  display: inline-block;
+  font-size: 5vw;
+  font-weight: 570;
+  border-bottom: 0.3vw solid black;
+}
+#page3-top h2:hover {
+  filter: contrast(200%);
+}
+#page3-content {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#page3-content #list-parking {
+  width: 50%;
+  height: 100%;
+  background-color: #c0c0c0;
+  margin: 1vw 2vw;
+  border-radius: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
+#page3-content #list-parking h2 {
+  font-size: 5vw;
+  color: #000;
+  font-family: poppins;
+  font-style: oblique;
+  border-bottom: 0.5vw solid #000;
+}
+#page3-content #list-parking #para {
+  color: #000;
+  font-size: 2.5rem;
+}
+#page3-content #list-parking #para h3{
+  padding: 0.5vw 0vw;
+}
+#page3-content #list-parking button{
+  border-radius: 2vw;
+  font-size: 3vw;
+  color: white;
+  background-color: #486C6E;
+  padding: 0.7vw 3vw;
+  margin-bottom: 3.4vw;
+}
+
+
+#page3-content #find-parking {
+  width: 50%;
+  height: 100%;
+  background-color: #c0c0c0;
+  border-radius: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#find-parking h2{
+  font-size: 5vw;
+  color: #000;
+  font-family: poppins;
+  font-style: oblique;
+  border-bottom: 0.5vw solid #000;
+}
+#find-parking h3{
   font-size: 4vw;
-  font-weight: 500;
+  /* margin-bottom:4vw; */
+}
+#find-parking #options{
+  display: flex;
+}
+#find-parking #options button{
+  border-radius: 2vw;
+  font-size: 2vw;
+  color: white;
+  background-color: #486C6E;
+  margin: 2vw 0.8vw;
+  padding: 0.7vw 3vw;
 }
 #page4 {
   height: 100vh;
@@ -313,6 +415,7 @@ nav h4 {
 }
 #page5 #top #top-left button:hover {
   background-color: white;
+  font-weight: bold;
   color: black;
   transition: ease-in-out 0.3s;
 }
