@@ -67,13 +67,13 @@ function cursorEffect() {
 }
 cursorEffect();
 
-function page2Animation() {
-  gsap.from("#page2-top #heading h4, .elem h1", {
+function page4Animation() {
+  gsap.from("#page4-top #heading h4, .elem h1", {
     y: 100,
     stagger: 0.2,
     duration: 1,
     scrollTrigger: {
-      trigger: "#page2",
+      trigger: "#page4",
       scroller: "#main", //if we use locomotive then #main, otherwise "body"
       start: "top 90%",
       end: "top 37 %",
@@ -82,25 +82,25 @@ function page2Animation() {
     },
   });
 }
-page2Animation();
+page4Animation();
 
 function sliderAnimaton() {
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+    // navigation: {
+    //   nextEl: ".swiper-button-next",
+    //   prevEl: ".swiper-button-prev",
+    // },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: true,
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    //   autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: true,
-    //   },
   });
 }
 sliderAnimaton();
@@ -127,23 +127,10 @@ function loader() {
     opacity: 0,
     stagger: 0.1,
     duration: 0.5,
-    delay: -0.5,
+    delay: 0.5,
   });
   tl.to("#loader", {
     display: "none",
   });
 }
 loader();
-
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     console.log(entry);
-//     if (entry.isIntersecting) entry.target.classList.add("show");
-//     else entry.target.classList.remove("show");
-//   });
-// });
-
-// const hiddenElements = document.querySelectorAll(".hidden");
-// hiddenElements.forEach((el) => observer.observe(el));
-
-
