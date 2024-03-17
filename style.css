@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: nb;
-  src: url(./NBInternationalProBoo.ttf);
+  src: url(./Fonts/NBInternationalProBoo.ttf);
 }
 @font-face {
   font-family: rejoy;
-  src: url(./Rejouice-Headline.ttf);
+  src: url(./Fonts/Rejouice-Headline.ttf);
 }
 * {
   margin: 0;
@@ -38,7 +38,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  /* transform: translate(-40%, -30%); */
+  transform: translate(50%, 50%);
 }
 #cursor h5 {
   font-size: 1vw;
@@ -161,19 +161,14 @@ nav h4 {
   position: relative;
   background-color: black;
   padding: 3vw;
-  /* overflow: hidden; */
 }
 #page3-top {
   /* background-color: red; */
   text-align: center;
   padding-bottom: 1vw;
 }
-#page3-top h4 {
-  margin-bottom: 1vw;
-  font-size: 1.5vw;
-  font-weight: 500;
-}
 #page3-top h2 {
+  font-family: rejoy;
   user-select: none;
   padding-top: 1vw;
   display: inline-block;
