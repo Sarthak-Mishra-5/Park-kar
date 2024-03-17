@@ -159,7 +159,7 @@ nav h4 {
   height: 100vh;
   width: 100%;
   position: relative;
-  background-color: black;
+  background-color: #07001a;
   padding: 3vw;
 }
 #page3-top {
@@ -177,9 +177,7 @@ nav h4 {
   color: white;
   border-bottom: 0.3vw solid white;
 }
-#page3-top h2:hover {
-  filter: contrast(200%);
-}
+/*
 #page3-content {
   width: 100%;
   height: 80vh;
@@ -242,7 +240,7 @@ nav h4 {
 }
 #find-parking h3 {
   font-size: 4vw;
-  /* margin-bottom:4vw; */
+  /* margin-bottom:4vw; *
 }
 #find-parking #options {
   display: flex;
@@ -254,7 +252,8 @@ nav h4 {
   background-color: #486c6e;
   margin: 2vw 0.8vw;
   padding: 0.7vw 3vw;
-}
+} */
+
 #page4 {
   height: 100vh;
   width: 100%;
@@ -429,3 +428,119 @@ hr {
   -webkit-background-clip: text;
   background-clip: text;
 }
+
+:root {
+  --pink: hsl(338, 70%, 55%);
+  --teal: hsl(183, 70%, 62%);
+  --white: hsl(334, 7%, 95%);
+}
+
+#page3 {
+  background: hsl(224, 32%, 12%);
+  background-image: conic-gradient(
+    from 0deg at 50% 50%,
+    blue,
+    purple,
+    purple,
+    blue
+  );
+  background-blend-mode: multiply;
+  min-block-size: 100dvh;
+  display: grid;
+  place-items: center;
+}
+pre {
+  --selector: var(--pink);
+  --property: var(--teal);
+  --punctuation: var(--white);
+  --undefined: var(--white);
+
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--undefined);
+  background: hsl(222, 45%, 7%);
+  padding: 2rem;
+  border-radius: 1rem;
+
+  position: relative;
+  display: flex;
+  gap: 2vw;
+
+  transform-style: preserve-3d;
+  transform: perspective(5000px) rotateY(var(--rotateX)) rotateX(var(--rotateY));
+}
+
+pre > * {
+  text-shadow: 0 0 0.3em currentColor;
+}
+
+pre::before,
+pre::after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+}
+
+/* shadow */
+pre::before {
+  inset: 0.75rem;
+  border-radius: inherit;
+  background: black;
+  z-index: -1;
+  transform: translateZ(-50px);
+  filter: blur(15px);
+  opacity: 0.5;
+}
+
+/* gradient thingy */
+pre::after {
+  z-index: -2;
+  inset: -1rem;
+  background: linear-gradient(-45deg, red, blue);
+  transform: translateZ(-50px);
+}
+
+.selector {
+  color: var(--selector);
+}
+
+.property {
+  color: var(--property);
+}
+
+.punctuation {
+  color: var(--punctuation);
+}
+
+.property + .punctuation {
+  color: var(--property);
+}
+
+.pre-container {
+  position: relative;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+button {
+  align-self: flex-start;
+  font-size: 3rem;
+  border-radius: 1.7vw;
+  color: white;
+  background-color: hsl(224, 32%, 12%);
+  padding: 1vw 2vw;
+  text-shadow: 0 0 0.5em currentColor;
+  margin: 1vw;
+}
+#list-parking button {
+  padding: 1vw 4vw;
+}
+#find-parking {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+}
+
+

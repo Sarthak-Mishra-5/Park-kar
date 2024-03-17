@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
@@ -16,11 +17,11 @@
     <title>Home | PARKकर®️</title>
   </head>
   <body>
-    <!-- <div id="loader">
+    <div id="loader">
       <h3>Tomorrow's</h3>
       <h3>Brand,</h3>
       <h3>Today "</h3>
-    </div> -->
+    </div>
     <div id="main">
       <div id="page1">
         <div id="cursor">
@@ -35,7 +36,7 @@
             <div id="nav-part2">
               <h4><a href="#">Sign In</a></h4>
               <h4><a href="#">Log In</a></h4>
-              <h4 id="menu"><a href="">Menu</a></h4>
+              <h4 id="menu"><a href="#">Menu</a></h4>
             </div>
           </nav>
           <h1>
@@ -48,28 +49,23 @@
         <div id="page3-top">
           <h2>Explore our services</h2>
         </div>
-        <div id="page3-content">
-          <div id="list-parking">
-            <h2>List Parking?</h2>
-            <div id="para">
-              <h3>Ready to join our community?</h3>
-              <h3>List your parking space today,</h3>
-              <h3>
-                <span style="color: yellow">& </span> Start earning
-                effortlessly!
-              </h3>
-            </div>
-            <button>Enlist</button>
-          </div>
-          <div id="find-parking">
-            <h2>Find Parking?</h2>
-            <h3>Explore your options:</h3>
-            <div id="options">
-              <button>Public Parking</button>
-              <button>Private Parking</button>
-            </div>
-          </div>
-        </div>
+        <pre>
+<div id="list-parking"><h2  class="selector">List Parking</h2>
+<span class="property">Ready to join our community?</span>
+<span class="property">List your parking space today,</span>
+<span class="property">& Start earning effortlessly!</span>
+
+<button  onclick="myFunction();">Enlist now</button>
+</div>
+<hr>
+<div id="find-parking"><h2 class="selector">Find Parking</h2>
+<span class="property">Explore your options: </span>
+
+
+<div class="button"><button onclick="myFunction();">Public Parking</button><button onclick="myFunction();">Private Parking</button></div>
+
+</div>
+</pre>
       </div>
       <div id="page4">
         <div id="page4-top">
@@ -143,6 +139,11 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="script.js"></script>
+    <script src="3dEffect.js"></script>
   </body>
 </html>
