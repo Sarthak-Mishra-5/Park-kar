@@ -88,17 +88,11 @@ function sliderAnimaton() {
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
+    effect: "slide",
+    speed: 1000, // Adjust the speed of the slide transition
     loop: true,
-    // pagination: {
-    //   el: ".swiper-pagination",
-    //   clickable: true,
-    // },
-    // navigation: {
-    //   nextEl: ".swiper-button-next",
-    //   prevEl: ".swiper-button-prev",
-    // },
     autoplay: {
-      delay: 2500,
+      delay: 3000, // Increase the delay to decrease the speed
       disableOnInteraction: true,
     },
   });
